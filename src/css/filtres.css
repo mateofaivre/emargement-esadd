@@ -1,0 +1,157 @@
+@font-face {    
+    font-family: "Futura PT";
+    src: url("../font/Futura/FuturaPTMedium.otf");
+}
+@font-face {    
+    font-family: "Futura PT Light";
+    src: url("../font/Futura/FuturaPTLight.otf");
+}
+@font-face {    
+    font-family: "Futura PT Demi";
+    src: url("../font/Futura/FuturaPTDemi.otf");
+}
+
+:root {
+    --colorText: #FFA900;
+    --colordark : #333333;      
+    --colorGrey : #878787;
+    --colorBarre : rgba(240, 240, 240, 0.7);
+    --colorWhite : #FFFFFF;
+    --colorDots : #DADADA;
+    --colorBlack: rgba(20,20,43,1);
+    --text-primary: #23232e;
+    --text-secondary: #141418;
+    --text-third: #929292;
+    --bg-primary:  #f9f9f9;
+    --bg-secondary: #f8f8f8 ;
+    --jauneESADD: #FAA900;
+    --transition-speed: 600ms;
+    --retard: #D31818;
+    --white: white;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    outline: none;
+  }
+  
+  html {
+    font-family: 'Futura PT', sans-serif;
+    line-height: 1.4;
+    font-size: 16px;
+  }
+  
+  #language, #weekStart {
+      display:none;
+  }
+
+  fieldset {
+    padding: 1rem;
+    border: none;
+    text-align: center;
+  }
+  
+  label {
+    display: inline-block;
+    padding-right: 0.25rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    text-align: right;
+    font-weight: 700;
+    font-size: 12px;
+    width: 100px;
+  }
+  
+  input, select {
+    padding: 0.25rem;   
+    width: 90px;
+    font-family: 'Futura PT';
+    background-color: transparent;
+    border:none;
+  }
+  
+  input {
+    text-align: center;
+    width: 40px;
+  }
+
+  section {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--bg-secondary);
+    border-radius: 20px;
+  }
+
+.containerCalendar{
+    padding: 3px;
+}
+  
+  #calendar {
+    /* width: 500px; */
+    /* margin: 2rem auto; */
+    background-color: var(--colorWhite);
+    padding-top: 0.5rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  
+  .labels, .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    grid-gap: 4px;
+  }
+  
+  .dates span {
+    height: 50px;
+    font-size: 16px;
+    letter-spacing: -1px;
+    border: 0.1px solid transparent;
+    line-height: 50px;
+    white-space: nowrap;
+  }
+  
+  .labels span {
+    font-weight: 450;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    /* opacity: 0.6; */
+  }
+
+.btSearch {
+    background-color: var(--colorText);
+    color: var(--colorWhite);
+    text-decoration: none;
+    border:none;
+    border-radius: 40px;
+    font-family: 'Futura PT';
+    letter-spacing: 0.75px;
+    margin-left:auto;
+    margin-right: auto;
+    display:block;
+    text-align:center;
+    white-space: nowrap;
+}
+
+@media all and (max-width: 600px){
+
+    section{
+        width: 75%;
+        /* height: 5rem; */
+    }   
+    
+    .searchBy {
+        margin-top: 2rem;
+    }
+
+    .btSearch {
+        width: 7rem;
+        height: 2.25rem;
+        line-height: 2.25rem;
+        
+    }
+}

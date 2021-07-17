@@ -1,0 +1,582 @@
+@font-face {    
+    font-family: "Futura PT";
+    src: url("../font/Futura/FuturaPTMedium.otf");
+}
+@font-face {    
+    font-family: "Futura PT Light";
+    src: url("../font/Futura/FuturaPTLight.otf");
+}
+@font-face {    
+    font-family: "Futura PT Demi";
+    src: url("../font/Futura/FuturaPTDemi.otf");
+}
+
+:root {
+    --colorText: #FFA900;
+    --colordark : #333333;      
+    --colorGrey : #878787;
+    --colorBarre : rgba(240, 240, 240, 0.7);
+    --colorWhite : #FFFFFF;
+    --colorDots : #DADADA;
+    --colorBlack: rgba(20,20,43,1);
+    --text-primary: #23232e;
+    --text-secondary: #141418;
+    --text-third: #929292;
+    --bg-primary:  #f9f9f9;
+    --bg-secondary: #f8f8f8 ;
+    --jauneESADD: #FAA900;
+    --transition-speed: 600ms;
+    --retard: #D31818;
+    --white: white;
+}
+
+
+*{
+    outline: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Futura PT';
+    height: 100vh;
+}
+
+/* MENU ----*/ 
+body::-webkit-scrollbar {
+    width: 0rem !important;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+  
+  .navbar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 600ms ease;
+    overflow: scroll;
+    z-index: 10;
+  }
+
+  .navbar::-webkit-scrollbar {
+    width: 0rem !important;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .nav-item {
+    width: 100%;
+  }
+
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+  }
+  
+  .nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
+  
+  .link-text {
+    display: none;
+    margin-left: 1rem;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .nav-link svg, .nav-link img {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+  }
+
+  .logo img {
+    width: 3rem;
+    border-radius: 50%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .logo .nav-link {
+    filter: none;
+  }
+  
+  .fa-primary {
+    color: #FAA900;
+  }
+  
+  .fa-secondary {
+    color: #d19003;
+  }
+  
+  .fa-primary,
+  .fa-secondary {
+    transition: var(--transition-speed);
+  }
+  
+  .logo {
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    /* padding-left: 3rem; */
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .logo span {
+     padding-left: 3rem;
+  }
+  
+  .logo svg {
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+  }
+  
+  .logo-text
+  {
+    display: inline;
+    position: absolute;
+    left: -999px;
+    transition: var(--transition-speed);
+  }
+  
+  .navbar:hover .logo svg {
+    transform: rotate(-180deg);
+  }
+  /*-----------------------*/
+
+
+form {
+  
+}
+
+input:not(.multiselect-input, .multiselect-checkbox, .check), .containerPhoto {
+    border:none;
+    background-color: var(--bg-secondary);
+    border-radius: 15px;
+    font-family: 'Futura PT Light';
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.containerPhoto {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type=submit]{
+    background-color: var(--colorText);
+    color: var(--colorWhite);
+    grid-column: 2;
+    letter-spacing: 0.75px;
+    padding:0 !important;
+}
+
+input[type=submit]:hover, #containerBt button:hover, .labelFile:hover, .clearSign:hover{
+    opacity: .5;
+    cursor:pointer;
+}
+
+input[type=file]{
+    display:none;
+}
+
+.labelFile {
+    text-decoration: underline;
+}
+
+.containerSignature {
+    display:flex;
+    flex-direction: column;
+}
+
+
+  
+#containerBt{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    position: relative;
+}
+
+#containerDatas {
+    background-color: var(--bg-secondary);
+    border-radius: 15px;
+    display: none;
+    height : 100%;
+}
+
+.containerSignature h4, .containerSignature p {
+  margin-left: 1.2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+  color: var(--colorGrey);
+}
+
+.containerSignature p {
+  font-family: 'Futura PT';
+  display:none;
+}
+
+
+
+.clearSign {
+  color: var(--colorBlack);
+  text-decoration: underline;
+  margin-left: 0.25rem;
+}
+
+.containerSignature h4, .containerNewSignature h4{
+    font-family: 'Futura PT Light';
+   
+}
+
+.containerNewSignature {
+  position: relative;
+  height: 8.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+}
+
+.containerNewSignature canvas {
+  display: block;
+  position: absolute;
+  top: 3.5rem;
+  left: 0;
+  height: 4.5rem;
+  background: var(--bg-secondary);
+  width: 35%;
+  left: 50%; /* à 50%/50% du parent référent */
+  transform: translateX(-50%); /* décalage de 50% de sa propre taille */
+  border: 1px solid var(--colorBlack);
+}
+
+#newSign{
+    position: relative;
+    left:1.5rem;
+    margin:0;
+    padding:0;
+    z-index: 1000;
+}
+
+.pwdCheckbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.containerNewSignature button {
+    background-color: transparent;
+    font-family: 'Futura PT Light';
+    /* color: var(--colorWhite); */
+    text-decoration: underline;
+    border:none;
+    /* border-radius: 15px;
+    letter-spacing: 0.75px; */
+    font-weight: 600;
+}
+
+textarea{
+    display: none;
+}
+
+.containerCheckbox {
+  grid-column: 2;
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  padding-left: 1.5rem;
+  height: 3.5rem;
+}
+
+.containerCheckbox label {
+  margin-left: 0.5rem;
+}
+
+.input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #FAA900;
+  /*display: none;*/
+  font-size: 1rem;
+  /*padding: .5em;*/
+  position: absolute;
+  right: 1rem;
+  top: 1.25rem;
+  z-index: 9;
+}
+
+main .errorMessage {
+    color: var(--retard);
+}
+
+main .doneMessage {
+    color: green;
+}
+
+@media all and (max-width: 600px){
+    /*------ MENU -------------*/
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+      }
+  
+      .separator{
+        display: none;
+      }
+    
+      .logo {
+        display: none;  
+      }
+    
+      .navbar-nav {
+        flex-direction: row;
+      }
+    
+      .nav-link {
+        justify-content: center;
+      }
+      /*------------*/
+
+    h1{
+        padding-left: 2.5rem;
+        /* margin-top:0; */
+    }
+
+    .form-popup{
+        padding: 2rem 2.5rem;    
+        padding-bottom: 7rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* align-items: center; */
+        /* grid-template-columns: 48% 48%;
+        grid-template-rows: repeat(5, 3.5rem);
+        grid-column-gap: 4%;
+        grid-row-gap: 1.5rem; */
+    }
+
+    input:not(.multiselect-input, .multiselect-checkbox, .check), .containerPhoto{
+        padding-left:1.5rem;
+        height: 3.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #checkProf {
+      margin-left: 1rem;
+    }
+
+
+    .containerSignature {
+      margin-bottom: 1.5rem;
+    }
+
+    /* #sig-canvas{
+        margin-top: 1rem;
+    } */
+    /* .labelFile {
+        padding-left: 1.5rem;
+    } 
+
+    .containerPhoto {
+      height: 3.5rem;
+      margin-bottom: 1rem;
+    } */
+
+    .containerSignature {
+      height: 8.5rem
+    }
+
+
+    .containerPhoto img{
+        width: 1.75rem;
+        margin-right: 0.5rem;
+    }
+
+    /* #containerDatas{
+        padding: 1rem 1.5rem;
+    } */
+
+    #newSign{
+        /* top:100%; */
+        /* top: 35%; */
+        top: 1rem;
+        left: 1.5rem;
+    }
+
+    #containerDatas img {
+        width:50%;
+        margin-left:25%;
+        margin-right: 25%;
+    }
+
+    #containerBt {
+      width: 100%;
+    }
+
+    /* #containerBt button {
+        width:100%;
+        height: 3.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }    */
+
+    .containerCheckbox {
+      margin-bottom: 1.5rem;
+    }
+}
+
+
+  @media all and (min-width: 601px){
+
+    /* MENU -----------*/
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+      }
+  
+    ul{
+    padding:0 10rem;
+    }
+
+    .separator{
+        width: 40%;
+        box-shadow: none;
+        border: 1px solid #DFDFDF;
+      }
+    
+      .navbar:hover {
+        width: 16rem;
+      }
+    
+      .navbar:hover .link-text {
+        display: inline;
+      }
+    
+      .navbar:hover .logo svg
+      {
+        margin-left: 11rem;
+      }
+    
+      .navbar:hover .logo-text
+      {
+        left: 0px;
+      }
+    /*-------------------*/
+
+    h1 {
+        display:none; 
+    }
+
+    .form-popup{
+        /* padding: 5rem 25%;     */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5rem;
+        height: 100%;
+    }
+
+    form {
+        width: 60%;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3.5rem 3.5rem 8.5rem 8.5rem ;
+        grid-column-gap: 5%;
+        grid-row-gap: 1.5rem;
+    }
+
+    input:not(.multiselect-input, .multiselect-checkbox, .check){
+        padding-left:1.5rem;
+        height: 3.5rem;
+    }
+
+    #checkProf {
+      margin-left: 2rem;
+    }
+
+    .labelFile {
+        padding-left: 1.5rem;
+    } 
+
+    .containerSignature {
+      height: 8.5rem;
+    }
+
+    .containerPhoto img{
+        width: 1.75rem;
+        margin-right: 1.5rem;
+    }
+
+    /* #sig-canvas{
+        margin-top: 1rem;
+    } */
+
+
+    #newSign{
+        top: 35%;
+    }
+
+    #containerDatas img {
+        display: block;
+        width: 12rem;
+        margin: 0 auto;
+    }
+
+    /* #containerBt button {
+        width: 8rem;
+        height: 2rem;
+        margin-top: 1rem;
+    } */
+}
+

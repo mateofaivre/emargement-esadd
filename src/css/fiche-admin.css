@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Futura PT";
+  src: url("../font/Futura/FuturaPTMedium.otf");
+}
+
+@font-face {
+  font-family: "Futura PT Light";
+  src: url("../font/Futura/FuturaPTLight.otf");
+}
+
+@font-face {
+  font-family: "Futura PT Demi";
+  src: url("../font/Futura/FuturaPTDemi.otf");
+}
+
+:root {
+  --colorText: #FFA900;
+  --colordark: #333333;
+  --colorWhite: #FFF;
+  --bg-secondary: #f8f8f8;
+  --colorGrey: #878787;
+}
+
+* {
+  outline: none;
+}
+
+body {
+  font-family: "Futura PT", sans-serif;
+  background: #fff;
+  margin: 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin-wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.admin-wrapper h1 {
+  margin: 0;
+}
+
+.admin-wrapper .select-prof {
+  border: none;
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+  font-family: 'Futura PT Light';
+  font-weight: 600;
+  font-size: 1rem;
+  padding-left: 1.5rem;
+  height: 3rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.admin-wrapper .select-prof option {
+  font-family: 'Futura PT Light';
+  font-weight: 600;
+  background-color: var(--bg-secondary) !important;
+  border: none;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.admin-wrapper a {
+  background-color: var(--colorText);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--colorWhite);
+  text-decoration: none;
+  letter-spacing: 0.75px;
+  border-radius: 40px;
+  width: 8.5rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+  margin-top: 2rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.admin-wrapper a.-disabled {
+  background-color: var(--colorGrey);
+  pointer-events: none;
+}
+
+.admin-wrapper a:hover {
+  opacity: .5;
+}
+/*# sourceMappingURL=fiche-admin.css.map */

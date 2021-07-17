@@ -1,0 +1,178 @@
+@font-face {    
+    font-family: "Futura PT";
+    src: url("../font/Futura/FuturaPTMedium.otf");
+}
+@font-face {    
+    font-family: "Futura PT Light";
+    src: url("../font/Futura/FuturaPTLight.otf");
+}
+@font-face {    
+    font-family: "Futura PT Demi";
+    src: url("../font/Futura/FuturaPTDemi.otf");
+}
+
+:root {
+    --colorText: #FFA900;
+    --colordark : #333333;
+    --colorGrey : #878787;
+    --colorBarre : #f0f0f0b3;
+    --colorWhite : #FFFFFF;
+}
+
+body{
+    height: 100vh;
+    font-family: "Futura PT";
+    color: var(--colordark);
+}
+
+#containerAll {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.ligne{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.titre{ 
+    font-family: "Futura PT Demi";
+}
+
+.reponse{
+    font-family: "Futura PT Light";
+}   
+
+.inputTime {
+    font-family: 'Futura PT Light';
+    border: none;
+    width: max-content;
+    font-size: 1.2rem;
+    /* text-align: center; */
+}
+
+/* input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    background: none;
+} */
+
+.lienBt{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btCreer{   
+    font-family: "Futura PT";
+    border:none;
+    background-color: var(--colorText);
+    color: var(--colorWhite);
+}
+
+.btCreer:hover, .footer:hover{
+    cursor: pointer;
+    opacity: .5;
+}
+
+.footer {
+    position: fixed;
+    color: var(--colordark);
+}  
+
+@media all and (max-width: 600px){
+    #containerAll {
+        top: 12.5%;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ligne{
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid var(--colorBarre) ;
+        padding-bottom: 0.75rem;
+    }
+    #containerDiplome{
+        height: 1.5rem; /* hauteur du parent */
+        line-height: 1.5rem; /* hauteur de ligne (identique) */
+        white-space: nowrap; /* interdiction de passer à la ligne */
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 2.5px solid;
+        border-bottom-color: var(--colorText);
+    }
+    #hrecap{
+        font-size: 1.5rem;
+    }
+    .reponse, .titre{
+        font-size: 1.2rem;  
+    }
+    input[type=time]{
+       width: 4.5rem;
+    }
+    #reponseDiplome{
+        color: var(--colorGrey);
+    }   
+    .lienBt{
+        margin-top: 2rem;
+    }
+    .btCreer{
+        border-radius: 2rem;
+        width: 6rem;
+        height: 2rem;
+    }
+    .footer{
+        bottom: 4%;
+        left: 4%;
+        font-size: 1.5rem;
+    }
+}
+
+@media all and (min-width: 601px){
+    #containerAll {
+        top: 12.5%;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ligne{
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid var(--colorBarre) ;
+        padding-bottom: 0.75rem;
+    }
+    #containerDiplome{
+        height: 1.5rem; /* hauteur du parent */
+        line-height: 1.5rem; /* hauteur de ligne (identique) */
+        white-space: nowrap; /* interdiction de passer à la ligne */
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 2.5px solid;
+        border-bottom-color: var(--colorText);
+    }
+    #hrecap{
+        font-size: 1.5rem;
+    }
+    .reponse, .titre{
+        font-size: 1.2rem;
+    }
+    #reponseDiplome{
+        color: var(--colorGrey);
+    }   
+    .lienBt{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .btCreer{
+        border-radius: 2rem;
+        width: 6rem;
+        height: 2rem;
+    }
+    .footer{
+        bottom: 4%;
+        left: 4%;
+        font-size: 1.5rem;
+    }
+}

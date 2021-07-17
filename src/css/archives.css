@@ -1,0 +1,740 @@
+@font-face {    
+    font-family: "Futura PT Medium";
+    src: url("../font/Futura/FuturaPTMedium.otf");
+}
+@font-face {    
+    font-family: "Futura PT Light";
+    src: url("../font/Futura/FuturaPTLight.otf");
+}
+@font-face {    
+    font-family: "Futura PT Demi";
+    src: url("../font/Futura/FuturaPTDemi.otf");
+}
+
+@font-face {    
+  font-family: "Futura PT";
+  src: url("../font/Futura/FuturaPTBook.otf");
+}
+
+:root {
+    --colorText: #FFA900;
+    --colordark : #333333;      
+    --colorGrey : #878787;
+    --colorBarre : rgba(240, 240, 240, 0.7);
+    --colorWhite : #FFFFFF;
+    --colorDots : #DADADA;
+    --colorBlack: rgba(20,20,43,1);
+    --text-primary: #23232e;
+    --text-secondary: #141418;
+    --text-third: #929292;
+    --bg-primary:  #f9f9f9;
+    --bg-secondary: #f8f8f8 ;
+    --jauneESADD: #FAA900;
+    --transition-speed: 600ms;
+    --retard: #D31818;
+    --white: white;
+}
+
+* {
+    outline: none;
+}
+
+body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Futura PT';
+  }
+
+
+  
+  body::-webkit-scrollbar {
+    width: 0rem !important;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+  
+  .navbar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 600ms ease;
+    overflow: scroll;
+  }
+
+  .navbar::-webkit-scrollbar {
+    width: 0rem !important;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .nav-item {
+    width: 100%;
+  }
+
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+  }
+  
+  .nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
+  
+  .link-text {
+    display: none;
+    margin-left: 1rem;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .nav-link svg, .nav-link img {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+  }
+
+  .logo img {
+    width: 3rem;
+    border-radius: 50%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .logo .nav-link {
+    filter: none;
+  }
+  
+  .fa-primary {
+    color: #FAA900;
+  }
+  
+  .fa-secondary {
+    color: #d19003;
+  }
+  
+  .fa-primary,
+  .fa-secondary {
+    transition: var(--transition-speed);
+  }
+  
+  .logo {
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    /* padding-left: 3rem; */
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .logo span {
+    padding-left: 3rem;
+  }
+  
+  .logo svg {
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+  }
+  
+  .logo-text
+  {
+    display: inline;
+    position: absolute;
+    left: -999px;
+    transition: var(--transition-speed);
+  }
+  
+  .navbar:hover .logo svg {
+    transform: rotate(-180deg);
+  }
+
+.containerForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.ligne1{
+    /* display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+}
+
+h1, h3{
+    font-weight: 600;
+}
+
+h4{
+    font-weight: 500;
+}
+
+.ligne{
+    /* display:flex;
+    flex-direction: row;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid var(--colorBarre);
+    border-top: 1px solid var(--colorBarre);
+    align-items: center;
+    color: var(--text-third);
+}
+
+.ligne a {
+    color: var(--colorText);
+}
+
+.containerForm p {
+    margin-top:0.35rem;
+    margin-bottom: 0.35rem;
+    color: var(--text-third);
+}
+
+.containerFiltrer {
+}
+
+.btFiltrerPC:hover, .btSearch:hover, .containerCalendarPromo i:hover{
+    cursor:pointer;
+} 
+
+.btSearch:hover, .btFiltrerPC:hover, .lignePeriode a:hover, .allFeuilles:hover, .containerCalendarPromo i:hover {
+    opacity: .5;
+  }
+
+/* .containerCalendarPromo{
+    display: flex;
+} */
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+        z-index: 1000;
+      }
+    
+      .separator{
+        display: none;
+      }
+    
+      .logo {
+        display: none;
+      }
+    
+      .navbar-nav {
+        flex-direction: row;
+      }
+    
+      .nav-link {
+        justify-content: center;
+      }
+
+    /* COURS ---------------*/
+    main{
+        padding-bottom: 9.2rem;
+    }
+
+    h1 {
+        margin-left: 5%;
+    }
+
+    .containerForm{
+        width: 90%;
+    }
+
+    .ligne1 h3 {
+        width: 50%;
+    }
+
+    .ligne1, .ligne {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .ligne{
+        height: 5rem; 
+    }
+
+    .ligneDate, .lignePeriode {
+        width: 100%;
+    }
+
+    .date, .periode{
+        margin-bottom: 0.25rem;
+    }
+
+    .groupe, .lignePeriode a{
+        margin-top: 0.25rem;
+    }
+
+    .lignePeriode a i{
+      margin-left: 0.5rem;
+    }
+
+    .containerFiltrerPhone {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5rem;
+        height: 5rem;
+        width: 100%;
+        position: fixed;
+        background-color: var(--colorWhite);
+    }
+
+    .btFiltrerPhone{
+        background-color: var(--colorText);
+        color: var(--colorWhite);
+        width: 7.25rem;
+        height: 2.3rem;
+        font-size: 14px;
+        border:none;
+        border-radius: 25px;
+        font-family: 'Futura PT';
+        font-weight: 600;
+        letter-spacing: 0.75px;
+        position: absolute;
+        top: 50%; left: 50%; /* à 50%/50% du parent référent */
+        transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    }
+
+    .btFiltrerPhone i {
+        display:none;
+    }
+
+    .btFiltrerPC{
+      display:none;
+    }
+
+    .fa-times{
+      top: 4%;
+      right: 5%;
+      font-size: 2rem;
+    }
+
+    /* .containerCalendarPromo{
+        flex-direction: column;
+    } */
+   
+}
+
+
+@media only screen and (min-width: 601px) {
+
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+      }
+  
+      ul{
+        padding:0 10rem;
+      }
+
+      .separator{
+        width: 40%;
+        box-shadow: none;
+        border: 1px solid #DFDFDF;
+      }
+    
+      .navbar:hover {
+        width: 16rem;
+      }
+    
+      .navbar:hover .link-text {
+        display: inline;
+      }
+    
+      .navbar:hover .logo svg
+      {
+        margin-left: 11rem;
+      }
+    
+      .navbar:hover .logo-text
+      {
+        left: 0px;
+      }
+
+    /* COURS ---------------*/
+    main{
+        padding-bottom: 2rem;
+    }
+
+    h1 {
+        margin-left: 20%;
+    }
+
+    .containerForm{
+        width: 60%;
+    }
+
+    .ligne1 h3 {
+        width: 50%;
+    }
+
+    .ligne1 , .ligne {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .ligne{
+        height: 5rem;
+    }
+
+    .ligneDate, .lignePeriode {
+        width: 100%;
+    }
+
+    .lignePeriode a i{
+      margin-left: 0.5rem;
+    }
+
+    .date, .periode{
+        margin-bottom: 0.25rem;
+    }
+
+    .groupe, .lignePeriode a{
+        margin-top: 0.25rem;
+    }
+
+    .lignePeriode a {
+        text-decoration: none;
+    }
+
+    .btFiltrerPC i  {
+        margin-left: 0.75rem;
+    }
+
+    .containerFiltrerPhone {
+        /* top : 74px;
+        right: 22.75%;
+        height: 5rem;
+        position: absolute; */
+        display: none;
+    }
+
+    .containerBtFiltrerPC {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    .btFiltrerPC{
+      display: flex;
+      font-family: 'Futura PT';
+      border:none;
+      background-color: transparent; 
+      /* justify-content: flex-end; */
+      width: fit-content;
+      /* height: 2.3rem; */
+      font-size: 1.17em;
+      font-weight: 600;
+      align-items: center;
+      padding:0;
+    }
+
+    .containerCalendarPromo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        column-gap: 5rem;
+        row-gap: 1.5rem;
+        margin-top:7vh;
+    }
+
+    .fa-times{
+      top: 3.5%;
+      right: 20%;
+      font-size: 2rem;
+    }
+   
+}
+
+
+
+
+/* FILTRES -----------------*/
+.containerCalendarPromo{
+    display:none;
+}
+
+.fa-times{
+  position: absolute;
+ }
+
+#language, #weekStart {
+    display:none;
+}
+
+.containerCalendar fieldset {
+  padding: 1rem;
+  border: none;
+  text-align: center;
+}
+
+.containerCalendar label {
+  display: inline-block;
+  padding-right: 0.25rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  text-align: right;
+  font-weight: 700;
+  font-size: 12px;
+  width: 100px;
+}
+
+.containerCalendar input, select {
+  padding: 0.25rem;   
+  width: 90px;
+  font-family: 'Futura PT';
+  background-color: transparent;
+  border:none;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.containerCalendar input {
+  text-align: center;
+  width: 4rem;
+}
+
+section {
+  background-color: var(--bg-secondary);
+  border-radius: 20px;
+}
+
+.containerCalendar{
+  padding: 3px;
+}
+
+#calendar {
+  /* width: 500px; */
+  /* margin: 2rem auto; */
+  background-color: var(--colorWhite);
+  padding-top: 0.5rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+#calendar .dates:hover{
+    cursor: pointer;
+}
+
+.labels, .dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  grid-gap: 4px;
+}
+
+.dates span {
+  height: 35px;
+  font-size: 16px;
+  letter-spacing: -1px;
+  border: 0.1px solid transparent;
+  line-height: 35px;
+  white-space: nowrap;
+}
+
+.labels span {
+  font-weight: 450;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  /* opacity: 0.6; */
+}
+
+.btSearch {
+  background-color: var(--colorText);
+  color: var(--colorWhite);
+  text-decoration: none;
+  border:none;
+  border-radius: 40px;
+  font-family: 'Futura PT Demi';
+  letter-spacing: 0.75px;
+  /* display:block; */
+  text-align:center;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.disabled {
+  background-color: var(--colorGrey); 
+  pointer-events: none;
+}
+
+.allFeuilles {
+    text-decoration: none;
+    color: var(--colorText);
+    display:none;
+}
+
+.allFeuilles i {
+    margin-right: 0.5rem;
+}
+
+@media all and (max-width: 600px){
+
+    section{
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        /* height: 5rem; */
+    } 
+  
+  section h2{
+      font-size: 1.25rem;
+      width: 80%;
+      margin-left: 10%;
+      padding-top: 1rem;
+      font-weight: 600;
+  }
+  
+  .searchBy {
+      margin-top: 2rem;
+      padding-bottom: 2rem;
+  }
+
+  .btSearch {
+      width: 8.5rem;
+      margin-left:auto;
+      margin-right: auto;
+      height: 2.25rem;
+      line-height: 2.25rem;
+      margin-top: 2rem;
+  }
+
+  .allFeuilles {
+    margin-top: 2rem;
+    margin-left: 5%;
+  }
+
+}
+
+@media all and (min-width: 601px){
+
+    section{
+        width: 100%;
+        /* height: 5rem; */
+    } 
+    
+    section h2{
+        font-size: 1.25rem;
+        width: 80%;
+        margin-left: 10%;
+        padding-top: 0.5rem;
+        font-weight: 600;
+    }
+    
+    .searchBy {
+        padding-bottom: 2rem;
+    }
+  
+    .btSearch {
+        width: 13.5rem;
+        height: 2.75rem;
+        line-height: 2.75rem;
+        margin-top: 1rem;
+        grid-row: 2;
+        grid-column: 1/3;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+  }
+
+
+
+/* CHECKBOX */
+  
+.containerCheckboxs{
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+  /* Customize the label (the container) */
+.checkboxRow {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+.checkboxRow input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    top: 50%;
+    left: 0; /* à 50%/50% du parent référent */
+    transform: translateY(-50%); /* décalage de 50% de sa propre taille */
+    height: 10px;
+    width: 10px;
+    border-radius: 25px;
+    /* background-color: #eee; */
+    border: 1px solid var(--colorBlack);
+  }
+  
+  /* On mouse-over, add a grey background color */
+  /* .container:hover input ~ .checkmark {
+    background-color:red;
+  } */
+
+  .checkboxRow:hover .checkmark{
+      background-color: var(--colorBlack);
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkboxRow input:checked ~ .checkmark {
+    background-color: var(--colorBlack);
+  }
+  

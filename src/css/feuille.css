@@ -1,0 +1,671 @@
+@font-face {    
+    font-family: "Futura PT Medium";
+    src: url("../font/Futura/FuturaPTMedium.otf");
+}
+@font-face {    
+    font-family: "Futura PT Light";
+    src: url("../font/Futura/FuturaPTLight.otf");
+}
+@font-face {    
+    font-family: "Futura PT Demi";
+    src: url("../font/Futura/FuturaPTDemi.otf");
+}
+
+@font-face {    
+  font-family: "Futura PT";
+  src: url("../font/Futura/FuturaPTBook.otf");
+}
+
+:root {
+    font-size: 16px;
+    --colorText: #FFA900;
+    --colordark : #333333;
+    --colorGrey : #878787;
+    --colorSeparatorCases: rgba(146,146,146, 0.25);
+    --colorBarre : rgba(240, 240, 240, 0.9);
+    --colorBarre2 : #C4C4C4;
+    --colorCaseGris: #F8F8F8;
+    --colorWhite : #FFFFFF;
+    --colorDots : #DADADA;
+    --colorBlack: rgba(20,20,43,1);
+    --text-primary: #23232e;
+    --text-secondary: #141418;
+    --text-third: #868686;
+    --bg-primary:  #f9f9f9;
+    --bg-secondary: #f8f8f8 ;
+    --jauneESADD: #FAA900;
+    --transition-speed: 600ms;
+    --retard: #D31818;
+    --white: white;
+}
+
+
+* {
+    outline: none;
+}
+
+body{
+    font-family: 'Futura PT';
+    margin: 0;
+    color: var(--colorBlack);
+}
+
+body::-webkit-scrollbar {
+    width: 0rem !important;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+  
+  .navbar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 600ms ease;
+    overflow: scroll;
+  }
+
+  .navbar::-webkit-scrollbar {
+    width: 0rem !important;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .nav-item {
+    width: 100%;
+  }
+
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+  }
+  
+  .nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
+  
+  .link-text {
+    display: none;
+    margin-left: 1rem;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .nav-link svg, .nav-link img {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+  }
+
+  .logo img {
+    width: 3rem;
+    border-radius: 50%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .logo .nav-link {
+    filter: none;
+  }
+  
+  .fa-primary {
+    color: #FAA900;
+  }
+  
+  .fa-secondary {
+    color: #d19003;
+  }
+  
+  .fa-primary,
+  .fa-secondary {
+    transition: var(--transition-speed);
+  }
+  
+  .logo {
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    /* padding-left: 3rem; */
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  
+  .logo svg {
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+  }
+
+  .logo span {
+      padding-left: 3rem;
+  }
+  
+  .logo-text
+  {
+    display: inline;
+    position: absolute;
+    left: -999px;
+    transition: var(--transition-speed);
+  }
+  
+  .navbar:hover .logo svg {
+    transform: rotate(-180deg);
+  }
+
+h1 {
+   font-family: 'Futura PT Medium';
+}
+
+
+
+h3 {
+    margin-left: 2rem;
+    font-family: 'Futura PT Demi';
+    font-weight: normal;
+}
+
+h3 span {
+    margin-left: 0.7rem;
+    font-family: 'Futura PT';
+    color: var(--colorGrey);
+    font-weight: normal;
+}
+
+#hrUn {
+    position: absolute;
+    width: 80.5%;
+    border: none;
+    border-top: 2px solid var(--colorBarre);
+    background: transparent;
+    /* height: 2px; */
+    /* border: none; */
+    top: 8.1rem;
+}
+
+#containerAll{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}   
+
+/* .ligne:first-of-type{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+.infos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 3rem 3rem;
+    border-top: 2px solid var(--colorText);
+    border-bottom: 2px solid var(--colorBarre);
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.droite {
+    justify-self: right;
+}
+
+.left {
+    padding-left: 3rem;
+}
+
+.reponsesInfos {
+    font-family: 'Futura PT Demi';
+}
+
+.reponsesInfos span{
+    font-family: 'Futura PT';
+    color: var(--colorGrey);
+    margin-left: 0.7rem;
+}
+
+.allCases {
+    display: grid;  
+    grid-template-columns: repeat(3 , 33.33333%);
+    margin-top: 2.5rem;
+}
+
+.ligne {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-left: 0.5px solid var(--colorSeparatorCases);
+    border-right: 0.5px solid var(--colorSeparatorCases);
+}
+
+.borderlessRight{
+    border-right:none;
+}
+
+.borderlessLeft{
+    border-left:none;
+}
+
+.ligne {
+    /* background-color: var(--colorCaseGris); */
+}
+
+.plein {
+    background-color:var(--colorCaseGris);
+}
+
+.nomUser {
+    width: 49%;
+    border-right: 1px solid var(--colorSeparatorCases);
+    text-align: center;
+}
+
+.imgSignatureEleve {
+    width: 25%;
+    /* border-left: 0.5px solid var(--colorSeparatorCases);*/
+}
+
+/* .imgSignatureEleve {
+    border-right: 0.5px solid var(--colorSeparatorCases);
+} */
+
+.tempsRetard {
+    width: 25%;
+    border-left: 0.5px solid var(--colorSeparatorCases);
+    text-align: center;
+    color: var(--jauneESADD);
+}
+
+
+
+
+.icon{  
+    text-align: center;
+    margin-top: auto;
+    margin-left:auto;
+    margin-bottom:auto;
+    color: var(--colorDots);
+}
+.ligne i:hover {
+    cursor: pointer;
+}
+.fa-check {
+    color:green;
+}
+.fa-times{
+    color:red;
+}
+
+.fa-times, .fa-check {
+    display:none;
+}
+
+.fa-times:hover, .fa-check:hover, input:hover{
+    cursor: pointer;
+}
+
+/* .photo{
+    grid-row: 1 / 3;
+}
+.nom{
+    grid-row: 2 / 3;
+} */
+
+/* .ligne i {
+    position: absolute;
+} */
+
+/* .reponse{
+    position: absolute;
+    font-weight: 300;
+} */
+/* .nbStudents{
+    font-weight: 600;
+} */
+/* .nomRed{
+    color:red;
+}
+.nomGreen{
+    color:green;
+} */
+
+.btSigner:hover{
+    cursor: pointer;
+}
+.btSigner{
+    font-family: "Futura PT Demi";
+    font-weight: 600;
+    border:none;
+    background-color: var(--colorText);
+    color: var(--colorWhite);
+    margin-left:auto;
+    margin-right: auto;
+}
+.inputRouge, .inputVert{
+    background: transparent;
+    border:none;
+}
+
+.lienBack {
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--colorText);    
+    text-decoration: none;
+}
+
+.reponse {
+    display:flex;
+    flex-direction: row;
+}
+
+.reponse a {
+    color: var(--colorBlack);
+}
+
+@media  all and (max-width: 600px){
+
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+      }
+    
+      .separator{
+        display: none;
+      }
+    
+      .logo {
+        display: none;
+      }
+    
+      .navbar-nav {
+        flex-direction: row;
+      }
+    
+      .nav-link {
+        justify-content: center;
+      }
+        
+        main {
+        margin: 0;
+        /* padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-top: 3rem;*/
+        padding-bottom: 2rem; 
+      }
+
+    #containerAll{
+        margin-top: 2rem;
+        width:85%;
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+    .reponse{
+        margin-right: 1rem;
+    }
+    /* .nbStudents{
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+    } */
+    h3 {
+        margin:0;
+    }
+    .infos{
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(4, 3rem);
+    }
+
+    .left, .droite {
+        margin: 0;
+        padding: 0;
+        justify-self: left;
+    }
+    #infoIntervenant {
+        display:flex;
+        flex-direction: column;
+    }
+    #infoIntervenant span {
+        margin: 0;
+    }
+    #hrUn {
+        display:none;
+    }
+    .allCases {
+        grid-template-columns: 100%;
+    }
+
+    .plein {
+        background-color:transparent;
+    }
+    .ligne:nth-of-type(odd) {
+        background-color: var(--colorCaseGris);
+    }
+    .borderlessLeft {
+        border-left: 1px solid var(--colorSeparatorCases);
+    }
+    .borderlessRight {
+        border-right: 1px solid var(--colorSeparatorCases);
+    }
+    .ligne{
+       /* border-bottom: 1px solid var(--colorBarre); */
+       /* border-top: 1px solid var(--colorBarre); */
+       height: 4rem;
+       height: 4rem; /* hauteur du parent */
+       line-height: 4rem; /* hauteur de ligne (identique) */
+       white-space: nowrap; /* interdiction de passer à la ligne */
+    }
+
+    .ligne:not(:first-of-type){
+        /* display: grid;
+        grid-template-columns: 3rem 1fr 1fr;
+        grid-gap: 10px;
+        grid-auto-rows: minmax(4rem, 4rem); */
+    }
+
+    .ligne i {
+        width: 10%;
+    }
+    .fa-times, .fa-check {
+        margin-right: 1rem;
+    }
+    /* .ligne:nth-of-type(2){
+        margin-top: 2rem;   
+    }    */
+    /* .nomGreen, .nomRed{
+        margin-left: -2rem;
+    } */
+    .icon, .photo{
+        height: 1.4rem; /* hauteur du parent */
+        line-height: 1.4rem; /* hauteur de ligne (identique) */
+        white-space: nowrap; /* interdiction de passer à la ligne */
+        margin-right:1rem;
+    }
+    .icon input {
+        padding:0;
+    }
+    .photo img {
+        width: 3rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .imgSignatureEleve{
+        /* width: 80px; */
+        /* height:2rem; */
+        /* margin-top:1rem;
+        margin-bottom: 1rem; */
+    }
+  
+    .btSigner{
+        margin-top: 3rem;
+        border-radius: 2rem;
+        width: 9rem;
+        height: 2rem;
+        margin-bottom: 3rem;
+    }
+    .lienBack{
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    .lienBack i {
+        margin-right: 0.5rem;
+    }
+}
+
+@media  all and (min-width: 601px){
+
+    h1, h3 {
+        display: inline;
+    }
+
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+      }
+  
+      ul{
+        padding:0 10rem;
+      }
+  
+  
+      main {
+        margin: 0;
+        margin-left: 5rem;
+        /* padding:0 5rem; */
+        /* display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        row-gap: 1.5rem; */
+        /* grid-gap: 1.5rem; */
+      }
+
+      .separator{
+        width: 40%;
+        box-shadow: none;
+        border: 1px solid #DFDFDF;
+      }
+    
+      .navbar:hover {
+        width: 16rem;
+      }
+    
+      .navbar:hover .link-text {
+        display: inline;
+      }
+    
+      .navbar:hover .logo svg
+      {
+        margin-left: 11rem;
+      }
+    
+      .navbar:hover .logo-text
+      {
+        left: 0px;
+      }
+
+    #containerAll{
+        margin-top: 2rem;
+        width:85%;
+        flex-direction: row;
+        margin-bottom: 5rem;
+    }
+    .containerEleves{
+        width:100%;
+    }
+    .reponse{
+        margin-right: 1rem;
+    }
+    /* .nbStudents{
+        margin-left: 0.5rem;
+        margin-right: 1rem;
+    } */
+    .ligne{
+       /* border-bottom: 1px solid var(--colorBarre); */
+       /* border-top: 1px solid var(--colorBarre); */
+       height: 4rem;
+       height: 4rem; /* hauteur du parent */
+       line-height: 4rem; /* hauteur de ligne (identique) */
+       white-space: nowrap; /* interdiction de passer à la ligne */
+    }
+
+    .ligne:not(:first-of-type){
+        /* display: grid;
+        grid-template-columns: 5rem 26rem 1fr;
+        grid-gap: 10px;
+        grid-auto-rows: minmax(4rem, 4rem); */
+    }
+
+    .ligne i {
+        width: 10%;
+    }
+    .fa-times, .fa-check {
+        margin-right: 2rem;
+    }
+    /* .ligne:nth-of-type(2){
+        margin-top: 2rem;   
+    }    */
+    /* .nomGreen, .nomRed{
+        margin-left: -13.5rem;
+    } */
+    .icon, .photo{
+        height: 1.4rem; /* hauteur du parent */
+        line-height: 1.4rem; /* hauteur de ligne (identique) */
+        white-space: nowrap; /* interdiction de passer à la ligne */
+        margin-right: 1rem;
+    }
+    .icon input {
+        padding:0;
+    }
+    .photo img {
+        width: 3rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .imgSignatureEleve{
+        /* width: 130px;
+        height:3rem;
+        margin-top:0.5rem;
+        margin-bottom: 0.5rem; */
+        /* margin-left:-1rem; */
+    }
+
+    .btSigner{
+        margin-top: 4.5rem;
+        border-radius: 2rem;
+        width: 17rem;
+        height: 2.5rem;
+        margin-left: 7rem;
+      
+    }
+    .lienBack{  
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    .lienBack i {
+        margin-right: 0.5rem;
+    }
+}

@@ -1,0 +1,88 @@
+@font-face {    
+  font-family: "Futura PT";
+  src: url("../font/Futura/FuturaPTMedium.otf");
+}
+@font-face {    
+  font-family: "Futura PT Light";
+  src: url("../font/Futura/FuturaPTLight.otf");
+}
+@font-face {    
+  font-family: "Futura PT Demi";
+  src: url("../font/Futura/FuturaPTDemi.otf");
+}
+
+
+
+h2 {
+  font-family: 'Futura PT';
+  font-weight: 400;
+  margin-top: 2rem;
+  /* text-align: center !important; */
+}
+
+#containerAll {
+  display:flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  touch-action: none;
+  text-align: center;
+}
+
+#sig-canvas{
+  background: rgba(232, 232, 232, 0.5);
+}
+
+#containerBt{
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#containerDatas{
+  display: none;
+}
+
+a {
+  font-family: 'Futura PT Light';
+}
+
+@media all and (max-width :600px){
+  #containerAll{
+  width: 80%;
+  }
+  h1 {
+    font-size: 2.25rem;
+  }
+  h1 span {
+    display:none;
+  }
+  #containerBt{
+    margin-top: 1rem;
+  }
+  button:first-of-type{
+    margin-right: 0.5rem
+  }
+  button:nth-of-type(2){
+    margin-left: 0.5rem;
+  }
+} 
+
+@media all and (min-width :601px){
+  #containerAll{
+  width: 40%;
+  }
+  #sig-canvas {
+    margin: 0 8rem;
+  }
+  #containerBt{
+    margin-top: 1rem;
+  }
+  button:first-of-type{
+    margin-right: 0.5rem
+  }
+  button:nth-of-type(2){
+    margin-left: 0.5rem;
+  }
+}

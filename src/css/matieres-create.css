@@ -1,0 +1,344 @@
+@font-face {    
+    font-family: "Futura PT";
+    src: url("../font/Futura/FuturaPTMedium.otf");
+}
+@font-face {    
+    font-family: "Futura PT Light";
+    src: url("../font/Futura/FuturaPTLight.otf");
+}
+@font-face {    
+    font-family: "Futura PT Demi";
+    src: url("../font/Futura/FuturaPTDemi.otf");
+}
+
+:root {
+    --colorText: #FFA900;
+    --colordark : #333333;      
+    --colorGrey : #878787;
+    --colorBarre : rgba(240, 240, 240, 0.7);
+    --colorWhite : #FFFFFF;
+    --colorDots : #DADADA;
+    --colorBlack: rgba(20,20,43,1);
+    --text-primary: #23232e;
+    --text-secondary: #141418;
+    --text-third: #929292;
+    --bg-primary:  #f9f9f9;
+    --bg-secondary: #f8f8f8 ;
+    --jauneESADD: #FAA900;
+    --transition-speed: 600ms;
+    --retard: #D31818;
+    --white: white;
+}
+
+
+*{
+    outline: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Futura PT';
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* MENU ----*/ 
+body::-webkit-scrollbar {
+    width: 0rem !important;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+  
+  .navbar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 600ms ease;
+    overflow: scroll;
+  }
+
+  .navbar::-webkit-scrollbar {
+    width: 0rem !important;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .nav-item {
+    width: 100%;
+  }
+
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+  }
+  
+  .nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
+  
+  .link-text {
+    display: none;
+    margin-left: 1rem;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .nav-link svg, .nav-link img {
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
+  }
+
+  .logo img {
+    width: 3rem;
+    border-radius: 50%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .logo .nav-link {
+    filter: none;
+  }
+  
+  .fa-primary {
+    color: #FAA900;
+  }
+  
+  .fa-secondary {
+    color: #d19003;
+  }
+  
+  .fa-primary,
+  .fa-secondary {
+    transition: var(--transition-speed);
+  }
+  
+  .logo {
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    /* padding-left: 3rem; */
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .logo span {
+    padding-left: 3rem;
+  }
+  
+  .logo svg {
+    transform: rotate(0deg);
+    transition: var(--transition-speed);
+  }
+  
+  .logo-text
+  {
+    display: inline;
+    position: absolute;
+    left: -999px;
+    transition: var(--transition-speed);
+  }
+  
+  .navbar:hover .logo svg {
+    transform: rotate(-180deg);
+  }
+  /*-----------------------*/
+
+
+form {
+    
+}
+
+input:not(.multiselect-input, .multiselect-checkbox), .containerPhoto {
+    border:none;
+    background-color: var(--bg-secondary);
+    border-radius: 15px;
+    font-family: 'Futura PT Light';
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.containerPhoto {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type=submit]{
+    background-color: var(--colorText);
+    color: var(--colorWhite);
+    grid-column: 2;
+    letter-spacing: 0.75px;
+    padding:0 !important;
+}
+
+input[type=submit]:hover, #containerBt button:hover, .labelFile:hover{
+    opacity: .5;
+    cursor:pointer;
+}
+
+main .errorMessage {
+    color: var(--retard);
+}
+
+main .doneMessage {
+    color: green;
+}
+
+@media all and (max-width: 600px){
+    /*------ MENU -------------*/
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+      }
+  
+      .separator{
+        display: none;
+      }
+    
+      .logo {
+        display: none;  
+      }
+    
+      .navbar-nav {
+        flex-direction: row;
+      }
+    
+      .nav-link {
+        justify-content: center;
+      }
+      /*------------*/
+
+    h1{
+        padding-left: 2.5rem;
+        /* margin-top:0; */
+    }
+
+    .form-popup{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 78%;
+
+    }
+
+    form {
+      display: flex;
+       flex-direction: column ;
+       justify-content: center;
+       width: 80%;
+       /* margin: auto 2.5rem; */
+       /* align-items: center; */
+        /* grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 3.5rem);
+        /* grid-column-gap: 4%; */
+        /*grid-row-gap: 1rem; */
+    }
+
+    input:not(.multiselect-input, .multiselect-checkbox){
+        padding-left:1.5rem;
+        height: 3.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+}
+
+
+  @media all and (min-width: 601px){
+
+    /* MENU -----------*/
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+      }
+  
+    ul{
+    padding:0 10rem;
+    }
+
+    .separator{
+        width: 40%;
+        box-shadow: none;
+        border: 1px solid #DFDFDF;
+      }
+    
+      .navbar:hover {
+        width: 16rem;
+      }
+    
+      .navbar:hover .link-text {
+        display: inline;
+      }
+    
+      .navbar:hover .logo svg
+      {
+        margin-left: 11rem;
+      }
+    
+      .navbar:hover .logo-text
+      {
+        left: 0px;
+      }
+    /*-------------------*/
+
+    h1 {
+        display:none;
+    }
+
+    .form-popup{
+        /* padding: 5rem 23rem;     */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin-left: 5rem;
+    }
+
+    form {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3.5rem 3.5rem;
+        grid-column-gap: 5%;
+        grid-row-gap: 1.5rem;
+        width: 60%;
+    }
+
+    input:not(.multiselect-input, .multiselect-checkbox){
+        padding-left:1.5rem;
+        height: 3.5rem;
+    }
+
+}
+

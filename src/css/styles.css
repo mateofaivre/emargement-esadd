@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "Futura PTT";
+  src: url("../font/Futura/FuturaPTBook.otf");
+}
+
+@font-face {
+  font-family: "Futura PT Medium";
+  src: url("../font/Futura/FuturaPTMedium.otf");
+}
+
+* {
+  outline: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+li, ul, a {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+  font-family: "Futura PTT", sans-serif;
+}
+
+main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 7000px;
+  padding: 15px 35px 45px;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h1, h2 {
+  font-family: 'Futura PT Medium';
+}
+
+h2 {
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+}
+
+a {
+  margin: 2rem 0;
+  text-align: right;
+  text-decoration: none;
+  font-weight: 300;
+  color: #14142B;
+}
+
+a:hover {
+  color: #FAA900;
+}
+
+.input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+label {
+  padding: .5rem 0;
+}
+
+#txtUserName {
+  margin-bottom: 1em;
+}
+
+input[type="text"],
+input[type="password"] {
+  font-size: 1.25em;
+  height: auto;
+  padding: .5em;
+  border: 2px solid #FAA900;
+  border-radius: 10px;
+}
+
+/* suppress IE >= 10 native functionality that can show password */
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+button {
+  border: none;
+  margin-top: 1.5rem;
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  padding: .7rem 0;
+  background-color: #FAA900;
+  border-radius: 10px;
+  font-family: "Futura PTT", sans-serif;
+  font-size: 16px;
+  color: #ebebeb;
+  -webkit-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+.toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #FAA900;
+  /*display: none;*/
+  /*font-size: .9em;*/
+  /*padding: .5em;*/
+  position: absolute;
+  right: .75em;
+  top: -.7em;
+  z-index: 9;
+}
+
+.fa {
+  font-size: 1rem;
+}
+
+.fa-arrow-right {
+  margin-left: 0.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  input[type=text],
+  input[type=password] {
+    min-width: 500px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,174 @@
+@import 'variables';
+// @import 'animation-clouds';
+
+@font-face {
+  font-family: "Futura PTT";
+  src: url("../font/Futura/FuturaPTBook.otf")
+ }
+
+@font-face {
+  font-family: "Futura PT Medium";
+  src: url("../font/Futura/FuturaPTMedium.otf")
+}
+
+* {
+  outline: none;
+}
+
+
+// UTILITIES
+
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+
+  body::-webkit-scrollbar { width: 0 !important }
+
+
+  li,ul,a{
+    list-style: none;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #fff;
+    font-family: $primary-ff;
+  }
+
+  main {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 7000px;
+    padding: 15px 35px 45px;
+  }
+
+  textarea:focus, input:focus{
+    outline: none;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h1, h2 {
+    font-family: 'Futura PT Medium';
+  }
+
+
+  h2 {
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+  }
+
+  a{
+    margin: 2rem 0;
+    text-align: right;
+    text-decoration: none;
+    font-weight: 300;
+    color: $black;
+    &:hover{
+      color: $primary-color;
+    }
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    // width: 100%;
+  }
+
+  label{
+    padding: .5rem 0;
+  }
+
+  #txtUserName{
+    margin-bottom: 1em;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 1.25em;
+    height: auto;
+    padding: .5em;
+    border: $border;
+    border-radius: $border-radius;
+  } 
+  /* suppress IE >= 10 native functionality that can show password */
+  input[type="password"]::-ms-reveal {
+    display: none;
+  }
+  
+
+  // BUTTON
+
+  button{
+    border: none;
+    margin-top: 1.5rem;
+    outline: none;
+  }
+
+  .btn {
+    width: 100%;
+    padding: .7rem 0;
+    background-color: $primary-color;
+    border-radius: $border-radius;
+    font-family: $primary-ff;
+    font-size: 16px;
+    color: rgb(235, 235, 235);
+    transition: opacity .2s ease-in-out;
+    &:hover{
+      opacity: .5;
+      cursor: pointer;
+    }
+
+  }
+
+  // ICON TOGGLE
+  .toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $primary-color;
+    /*display: none;*/
+    /*font-size: .9em;*/
+    // font-weight: 600;
+    /*padding: .5em;*/
+    position: absolute;
+    right: .75em;
+    top: -.7em;
+    z-index: 9;
+  }
+  
+  .fa {
+    font-size: 1rem;
+  }
+
+  .fa-arrow-right {
+    margin-left: 0.5rem;
+  }
+
+  
+
+// grands ecrans
+  @media only screen and (min-width:600px){
+    input[type=text],
+    input[type=password]{
+    min-width: 500px;
+    }
+  }
+
+  // petits ecrans
+  @media only screen and (max-width:600px){
+
+  }

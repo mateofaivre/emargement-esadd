@@ -1,0 +1,92 @@
+@font-face {    
+    font-family: "Futura PT";
+    src: url("../font/Futura/FuturaPTMedium.otf");
+}
+@font-face {    
+    font-family: "Futura PT Light";
+    src: url("../font/Futura/FuturaPTLight.otf");
+}
+@font-face {    
+    font-family: "Futura PT Demi";
+    src: url("../font/Futura/FuturaPTDemi.otf");
+}
+
+:root {
+    --colorText: #FFA900;
+    --colordark : #333333;
+    --colorWhite: #FFF;
+    --bg-secondary: #f8f8f8;
+    --colorGrey : #878787;
+}
+
+* {
+    outline: none;
+}
+
+body {
+    font-family: "Futura PT", sans-serif;
+    background: #fff;   
+    margin:0;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-wrapper {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+
+    h1 {
+        margin:0;
+    }
+
+    .select-prof {
+        border: none;
+        background-color: var(--bg-secondary);
+        border-radius: 15px;
+        font-family: 'Futura PT Light';
+        font-weight: 600;
+        font-size: 1rem;
+        padding-left: 1.5rem;
+        height: 3rem;
+        width: 100%;
+        margin-top: 2rem;
+
+        option {
+            font-family: 'Futura PT Light';
+            font-weight: 600;
+            background-color: var(--bg-secondary) !important;
+            border: none;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+    }
+
+    a {
+        background-color: var(--colorText);
+        width: fit-content;
+        color: var(--colorWhite);
+        text-decoration: none;
+        letter-spacing: 0.75px;
+        border-radius: 40px;
+        width: 8.5rem;
+        height: 2.25rem;
+        line-height: 2.25rem;
+        text-align: center;
+        margin-top: 2rem;
+        align-self:flex-end;
+
+        &.-disabled {
+            background-color: var(--colorGrey);
+            pointer-events: none;
+        }
+
+        &:hover {
+            opacity: .5;
+        }
+    }
+}

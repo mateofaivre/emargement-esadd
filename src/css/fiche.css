@@ -1,0 +1,206 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Futura PT";
+  src: url("../font/Futura/FuturaPTMedium.otf");
+}
+
+@font-face {
+  font-family: "Futura PT Light";
+  src: url("../font/Futura/FuturaPTLight.otf");
+}
+
+@font-face {
+  font-family: "Futura PT Demi";
+  src: url("../font/Futura/FuturaPTDemi.otf");
+}
+
+:root {
+  --colorText: #FFA900;
+  --colordark: #333333;
+  --colorWhite: #FFF;
+  --bg-secondary: #f8f8f8;
+}
+
+* {
+  outline: none;
+}
+
+body {
+  font-family: "Futura PT", sans-serif;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background: #fff;
+  margin: 0;
+  height: 100vh;
+}
+
+h1, h3 {
+  font-weight: normal;
+}
+
+.btnEtape {
+  font-family: "Futura PT";
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  text-align: left;
+  color: var(--colorText);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.products {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.containerBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.title {
+  margin: 0 0 12px;
+  color: var(--colorDark);
+  font-size: 24px;
+  font-family: 'Futura PT Demi';
+  font-weight: 600;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  text-align: left;
+  display: block;
+}
+
+.footer {
+  position: fixed;
+  color: var(--colordark);
+  display: none;
+}
+
+.footer:hover, .containerBtn a:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
+.btnEtape i {
+  position: absolute;
+}
+
+.lienAdmin {
+  text-align: center;
+  text-decoration: none;
+  font-weight: 100;
+  color: #14142B;
+  position: fixed;
+  bottom: 4%;
+}
+
+.lienAdmin:hover {
+  color: #FAA900;
+}
+
+/* .xdebug-error, .xe-notice {
+    display:none !important;
+} */
+/* font{
+    display :none;
+} */
+@media all and (max-width: 600px) {
+  body {
+    line-height: 1.6em;
+  }
+  .products {
+    width: 85%;
+    top: 20%;
+  }
+  .containerBtn {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+  .btnEtape {
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    height: 1.8rem;
+    /* hauteur du parent */
+    line-height: 1.8rem;
+    /* hauteur de ligne (identique) */
+    white-space: nowrap;
+    /* interdiction de passer à la ligne */
+  }
+  .btnEtape:first-of-type {
+    margin-top: 0rem;
+  }
+  .btnEtape i {
+    right: 0;
+    font-size: 1.8rem;
+  }
+  .footer {
+    bottom: 4%;
+    left: 4%;
+    font-size: 1.5rem;
+  }
+  .lienAdmin {
+    right: 4%;
+  }
+}
+
+@media all and (min-width: 601px) {
+  body {
+    line-height: 1.6em;
+  }
+  .products {
+    width: 40%;
+    top: 14%;
+  }
+  .containerBtn {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+  .btnEtape {
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    height: 1.8rem;
+    /* hauteur du parent */
+    line-height: 1.8rem;
+    /* hauteur de ligne (identique) */
+    white-space: nowrap;
+    /* interdiction de passer à la ligne */
+  }
+  .btnEtape:hover {
+    cursor: pointer;
+  }
+  .btnEtape:first-of-type {
+    margin-top: 0rem;
+  }
+  .btnEtape i {
+    right: 0;
+    font-size: 1.8rem;
+  }
+  .footer {
+    bottom: 4%;
+    left: 4%;
+    font-size: 1.5rem;
+  }
+  .lienAdmin {
+    right: 4%;
+  }
+}
+/*# sourceMappingURL=fiche.css.map */
